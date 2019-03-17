@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BooksViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class BooksViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var books: [Book] = []
@@ -54,7 +54,9 @@ class BooksViewController: UIViewController, UITableViewDataSource, UITableViewD
         book5.shortDesc = "Former public defender James Forman, Jr. is a leading critic of mass incarceration and its disproportionate impact on people of color. In Locking Up Our Own, he seeks to understand the war on crime that began in the 1970s and why it was supported by many African American leaders in the nation’s urban centers."
         book5.author = "James Forman Jr."
     }
+}
 
+extension BooksViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -71,7 +73,9 @@ class BooksViewController: UIViewController, UITableViewDataSource, UITableViewD
         cell.authorLabel.text = "by " + book.author
         return cell
     }
-    
+}
+
+extension BooksViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         selectedBook = books[indexPath.row]
