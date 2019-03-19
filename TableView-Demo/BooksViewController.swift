@@ -53,6 +53,7 @@ class BooksViewController: UIViewController {
         book5.name = "Locking Up Our Own: Crime and Punishment in Black America"
         book5.shortDesc = "Former public defender James Forman, Jr. is a leading critic of mass incarceration and its disproportionate impact on people of color. In Locking Up Our Own, he seeks to understand the war on crime that began in the 1970s and why it was supported by many African American leaders in the nation’s urban centers."
         book5.author = "James Forman Jr."
+        books.append(book5)
     }
 }
 
