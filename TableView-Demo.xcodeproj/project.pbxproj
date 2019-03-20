@@ -14,7 +14,7 @@
 		0F659C962238027A00535DCF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F659C942238027A00535DCF /* LaunchScreen.storyboard */; };
 		0F659CA12238027A00535DCF /* TableView_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F659CA02238027A00535DCF /* TableView_DemoTests.swift */; };
 		0F659CAC2238039A00535DCF /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F659CAB2238039A00535DCF /* BookTableViewCell.swift */; };
-		0FCE452C224296BC00BBBDE8 /* ScreenShot.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FCE452B224296BC00BBBDE8 /* ScreenShot.png */; };
+		0FCE452E2242972E00BBBDE8 /* ScreenShot.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FCE452D2242972E00BBBDE8 /* ScreenShot.png */; };
 		0FE6B056223E1AD90089737E /* BookDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE6B055223E1AD90089737E /* BookDetailsViewController.swift */; };
 		0FE6B058223E1B750089737E /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE6B057223E1B750089737E /* Book.swift */; };
 /* End PBXBuildFile section */
@@ -41,7 +41,7 @@
 		0F659CA02238027A00535DCF /* TableView_DemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView_DemoTests.swift; sourceTree = "<group>"; };
 		0F659CA22238027A00535DCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0F659CAB2238039A00535DCF /* BookTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
-		0FCE452B224296BC00BBBDE8 /* ScreenShot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ScreenShot.png; path = ../../../../Desktop/ScreenShot.png; sourceTree = "<group>"; };
+		0FCE452D2242972E00BBBDE8 /* ScreenShot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScreenShot.png; sourceTree = "<group>"; };
 		0FE6B055223E1AD90089737E /* BookDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsViewController.swift; sourceTree = "<group>"; };
 		0FE6B057223E1B750089737E /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,7 +94,7 @@
 				0F659C972238027A00535DCF /* Info.plist */,
 				0F659C942238027A00535DCF /* LaunchScreen.storyboard */,
 				0F659C8C2238027700535DCF /* Main.storyboard */,
-				0FCE452B224296BC00BBBDE8 /* ScreenShot.png */,
+				0FCE452D2242972E00BBBDE8 /* ScreenShot.png */,
 			);
 			path = "TableView-Demo";
 			sourceTree = "<group>";
@@ -190,9 +190,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F659C962238027A00535DCF /* LaunchScreen.storyboard in Resources */,
-				0FCE452C224296BC00BBBDE8 /* ScreenShot.png in Resources */,
 				0F659C932238027A00535DCF /* Assets.xcassets in Resources */,
 				0F659C8E2238027700535DCF /* Main.storyboard in Resources */,
+				0FCE452E2242972E00BBBDE8 /* ScreenShot.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
