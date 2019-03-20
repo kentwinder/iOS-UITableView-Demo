@@ -14,14 +14,22 @@ class BooksViewController: UIViewController {
     var books: [Book] = []
     var selectedBook: Book!
     
+    var segueBooksToBookDetails = "BooksToBookDetails"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         mockData()
         
-        // Do any additional setup after loading the view, typically from a nib.
         tableView.dataSource = self
         tableView.delegate = self
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == segueBooksToBookDetails {
+            let bookDetailsViewController = segue.destination as! BookDetailsViewController
+            bookDetailsViewController.book = selectedBook
+        }
     }
     
     func mockData() {
@@ -68,10 +76,7 @@ extension BooksViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "BookTableViewCell", for: indexPath) as! BookTableViewCell
-        let book = books[indexPath.row]
-        cell.bookNameLabel.text = book.name
-        cell.bookDescLabel.text = book.shortDesc
-        cell.authorLabel.text = "by " + book.author
+        cell.book = books[indexPath.row]
         return cell
     }
 }
@@ -80,14 +85,7 @@ extension BooksViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         selectedBook = books[indexPath.row]
-        performSegue(withIdentifier: "BooksToBookDetails", sender: self)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "BooksToBookDetails" {
-            let bookDetailsViewController = segue.destination as! BookDetailsViewController
-            bookDetailsViewController.book = selectedBook
-        }
+        performSegue(withIdentifier: segueBooksToBookDetails, sender: self)
     }
 }
 
